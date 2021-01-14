@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".screen.MainActivity">
+
+<LinearLayout
+    android:layout_marginBottom="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <TextView
+        android:onClick="nguoidung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/nguoidung"
+        android:gravity="center"
+        android:text="Người dùng"
+        android:layout_marginRight="50dp"/>
+    <TextView
+        android:onClick="theloai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/theloai"
+        android:gravity="center"
+        android:text="Thể Loại"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:onClick="sach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/sach"
+            android:gravity="center"
+            android:text="Sách"
+            android:layout_marginRight="50dp"/>
+        <TextView
+            android:onClick="hoadon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/hoadon"
+            android:gravity="center"
+            android:text="Hoá Đơn"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:onClick="sachbanchay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/sachbanchay"
+            android:gravity="center"
+            android:text="Sách Bán Chạy"
+            android:layout_marginRight="50dp"/>
+        <TextView
+            android:onClick="thongke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/thongke"
+            android:gravity="center"
+            android:text="Thống Kê"/>
+    </LinearLayout>
+
+</LinearLayout>

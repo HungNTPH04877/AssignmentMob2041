@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hungnt.assignmentmob2041">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AssignmentMob2041">
+        <activity android:name=".screen.ThongKeDoanhThuActivity"></activity>
+        <activity android:name=".screen.LuotSachBanChayActivity" />
+        <activity android:name=".screen.ListHoaDonChiTietByIDActivity" />
+        <activity android:name=".screen.HoaDonChiTietActivity" />
+        <activity android:name=".screen.HoaDonActivity" />
+        <activity android:name=".screen.ListHoaDonActivity" />
+        <activity android:name=".screen.ListBookActivity" />
+        <activity android:name=".screen.ThemSachActivity" />
+        <activity android:name=".screen.ThemTheLoaiActivity" />
+        <activity android:name=".screen.ChiTietTheLoaiActivity" />
+        <activity android:name=".screen.TheLoaiActivity" />
+        <activity android:name=".screen.ListTheLoaiActivity" />
+        <activity android:name=".screen.NguoiDungDetailActivity" />
+        <activity android:name=".screen.NguoiDungActivity" />
+        <activity android:name=".screen.ListNguoiDungActivity" />
+        <activity android:name=".screen.ChangePasswordActivity" />
+        <activity android:name=".screen.loginScreen" />
+        <activity android:name=".screen.MainActivity" />
+        <activity android:name=".screen.splashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
