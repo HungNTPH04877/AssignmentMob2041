@@ -80,7 +80,7 @@ public class HoaDonChiTietDAO {
         String sSQL = "SELECT maHDCT, HoaDon.maHoaDon,HoaDon.ngayMua, " +
                 "Sach.maSach, Sach.maTheLoai, Sach.tenSach, Sach.tacGia, Sach.NXB, Sach.giaBia, " +
                 "Sach.soLuong,HoaDonChiTiet.soLuong FROM HoaDonChiTiet INNER JOIN HoaDon " +
-                "on HoaDonChiTiet.maHoaDon = HoaDon.maHoaDon INNER JOIN Sach onSach.maSach " +
+                "on HoaDonChiTiet.maHoaDon = HoaDon.maHoaDon INNER JOIN Sach on Sach.maSach " +
                 "= HoaDonChiTiet.maSach where HoaDonChiTiet.maHoaDon='" + maHoaDon + "'";
         Cursor c = db.rawQuery(sSQL, null);
         c.moveToFirst();

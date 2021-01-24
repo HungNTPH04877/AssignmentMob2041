@@ -80,8 +80,7 @@ public class NguoiDungDAO {
         ContentValues values = new ContentValues();
         values.put("username", nd.getUserName());
         values.put("password", nd.getPassword());
-        int result = db.update(TABLE_NAME, values, "username=?", new
-                String[]{nd.getUserName()});
+        int result = db.update(TABLE_NAME, values, "username=?", new String[]{nd.getUserName()});
         if (result == 0) {
             return -1;
         }

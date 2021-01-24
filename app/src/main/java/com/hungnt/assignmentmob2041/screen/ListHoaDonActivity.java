@@ -43,11 +43,9 @@ public class ListHoaDonActivity extends AppCompatActivity {
         lvHoaDon.setAdapter(adapter);
         lvHoaDon.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position,
-                                    long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 HoaDon hoaDon = (HoaDon) parent.getItemAtPosition(position);
-                Intent intent = new Intent(ListHoaDonActivity.this,
-                        ListHoaDonChiTietByIDActivity.class);
+                Intent intent = new Intent(ListHoaDonActivity.this, HoaDonChiTietActivity.class);
                 Bundle b = new Bundle();
                 b.putString("MAHOADON", hoaDon.getMaHoaDon());
                 intent.putExtras(b);

@@ -83,16 +83,14 @@ public class ThemSachActivity extends AppCompatActivity {
 
     public void addBook(View view) {
         sachDAO = new SachDAO(ThemSachActivity.this);
-        Sach sach = new
-                Sach(edMaSach.getText().toString(), maTheLoai, edTenSach.getText().toString(),
+        Sach sach = new Sach(edMaSach.getText().toString(), maTheLoai, edTenSach.getText().toString(),
                 edTacGia.getText().toString(), edNXB.getText().toString(),
-
-                Double.parseDouble(edGiaBia.getText().toString()), Integer.parseInt(edSoLuong.getText
-                ().toString()));
+                Double.parseDouble(edGiaBia.getText().toString()), Integer.parseInt(edSoLuong.getText().toString()));
         try {
             if (sachDAO.inserSach(sach) > 0) {
-                Toast.makeText(getApplicationContext(), "Thêm thành công",
-                        Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Thêm thành công", Toast.LENGTH_SHORT).show();
+                Intent lb = new Intent(this,ListBookActivity.class);
+                startActivity(lb);
             } else {
                 Toast.makeText(getApplicationContext(), "Thêm thất bại",
                         Toast.LENGTH_SHORT).show();

@@ -61,8 +61,7 @@ public class ListBookActivity extends AppCompatActivity {
         EditText edSeach = (EditText) findViewById(R.id.edSearchBook);
         edSeach.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int
-                    count) {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
                 System.out.println("Text [" + s + "] - Start [" + start + "] - Before[" + before + "] - Count[" + count + "]");
                 if (count < before) {
                     adapter.resetData();
@@ -71,8 +70,7 @@ public class ListBookActivity extends AppCompatActivity {
             }
 
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count,
-                                          int after) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
 
             @Override

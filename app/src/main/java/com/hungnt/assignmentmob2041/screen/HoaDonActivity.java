@@ -63,20 +63,16 @@ public class HoaDonActivity extends AppCompatActivity implements DatePickerDialo
             if (validation() < 0) {
                 Toast.makeText(getApplicationContext(), "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
             } else {
-                HoaDon hoaDon = new
-                        HoaDon(edMaHoaDon.getText().toString(),sdf.parse(edNgayMua.getText().toString()));
+                HoaDon hoaDon = new HoaDon(edMaHoaDon.getText().toString(),sdf.parse(edNgayMua.getText().toString()));
                 if (hoaDonDAO.inserHoaDon(hoaDon) > 0) {
-                    Toast.makeText(getApplicationContext(), "Thêm thành công",
-                            Toast.LENGTH_SHORT).show();
-                    Intent intent = new
-                            Intent(this,HoaDonActivity.class);
+                    Toast.makeText(this, "Thêm thành công", Toast.LENGTH_SHORT).show();
+                    Intent lhd = new Intent(this,ListHoaDonActivity.class);
                     Bundle b = new Bundle();
                     b.putString("MAHOADON", edMaHoaDon.getText().toString());
-                    intent.putExtras(b);
-                    startActivity(intent);
+                    lhd.putExtras(b);
+                    startActivity(lhd);
                 } else {
-                    Toast.makeText(getApplicationContext(), "Thêm thất bại",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Thêm thất bại", Toast.LENGTH_SHORT).show();
                 }
             }
         } catch (Exception ex) {

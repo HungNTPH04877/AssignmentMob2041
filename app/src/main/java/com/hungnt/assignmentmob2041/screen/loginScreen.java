@@ -46,15 +46,14 @@ public class loginScreen extends AppCompatActivity {
             if (nguoiDungDAO.checkLogin(strUser, strPass) > 0) {
 //                Intent intent = new Intent(loginScreen.this, MainActivity.class);
 //                startActivity(intent);
-                Toast.makeText(getApplicationContext(), "Login thanh cong", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Login thanh cong 1111", Toast.LENGTH_SHORT).show();
             }
-            if
-            (strUser.equalsIgnoreCase("admin") && strPass.equalsIgnoreCase("admin")) {
+            if (strUser.equalsIgnoreCase("admin") && strPass.equalsIgnoreCase("admin")) {
                 rememberUser(strUser, strPass, chkRememberPass.isChecked());
                 Intent intent = new Intent(loginScreen.this, MainActivity.class);
                 startActivity(intent);
                 finish();
-                Toast.makeText(getApplicationContext(), "Login thanh cong", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Login thanh cong 2222", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(getApplicationContext(), "Tên đăng nhập và mật khẩu không đúng",
                         Toast.LENGTH_SHORT).show();

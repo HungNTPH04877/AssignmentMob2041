@@ -37,10 +37,8 @@ public class ListNguoiDungActivity extends AppCompatActivity {
         lvNguoiDung.setAdapter(adapter);
         lvNguoiDung.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position,
-                                    long id) {
-                Intent intent = new
-                        Intent(ListNguoiDungActivity.this, NguoiDungDetailActivity.class);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(ListNguoiDungActivity.this, NguoiDungDetailActivity.class);
                 Bundle b = new Bundle();
                 b.putString("USERNAME", dsNguoiDung.get(position).getUserName());
                 b.putString("PHONE", dsNguoiDung.get(position).getPhone());
@@ -51,8 +49,7 @@ public class ListNguoiDungActivity extends AppCompatActivity {
         });
         lvNguoiDung.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int
-                    position, long id) {
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 return false;
             }
         });
@@ -77,23 +74,20 @@ public class ListNguoiDungActivity extends AppCompatActivity {
         Intent intent;
         switch (item.getItemId()) {
             case R.id.add:
-                intent = new
-                        Intent(ListNguoiDungActivity.this, NguoiDungActivity.class);
+                intent = new Intent(ListNguoiDungActivity.this, NguoiDungActivity.class);
                 startActivity(intent);
                 return (true);
             case R.id.changePass:
-                intent = new
-                        Intent(ListNguoiDungActivity.this, ChangePasswordActivity.class);
+                intent = new Intent(ListNguoiDungActivity.this, ChangePasswordActivity.class);
                 startActivity(intent);
                 return (true);
             case R.id.logOut:
-                SharedPreferences pref =
-                        getSharedPreferences("USER_FILE", MODE_PRIVATE);
+                SharedPreferences pref = getSharedPreferences("USER_FILE", MODE_PRIVATE);
                 SharedPreferences.Editor edit = pref.edit();
                 //xoa tinh trang luu tru truoc do
                 edit.clear();
                 edit.commit();
-                intent = new Intent(ListNguoiDungActivity.this, MainActivity.class);
+                intent = new Intent(ListNguoiDungActivity.this, loginScreen.class);
                 startActivity(intent);
                 break;
         }
